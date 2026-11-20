@@ -2,42 +2,106 @@
 <html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Veille technologique - Matthieu NEYT</title><link rel="stylesheet" href="style.css">
 <style>
-.subtheme{border-left:3px solid var(--accent,#38bdf8);padding-left:1rem;margin-top:1.5rem}
-.subtheme h4{margin:0 0 .5rem 0}
-.subtheme .meta{font-size:.85rem;opacity:.7;margin:0 0 .5rem 0}
+:root{--accent:#38bdf8}
+.thematique{max-width:1200px;margin:3rem auto;padding:0 2rem}
+.eyebrow{color:var(--accent);font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin:0 0 .4rem 0}
+.thematique>h2{font-size:2.2rem;margin:0 0 .8rem 0;border-left:6px solid var(--accent);padding-left:1rem}
+.chapo{opacity:.75;font-size:1.05rem;max-width:70ch;margin:0 0 2.5rem 0}
+.grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.article{background:var(--card,#1e293b);border:1px solid rgba(255,255,255,.08);border-top:4px solid var(--accent);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s}
+.article:hover{transform:translateY(-4px)}
+.article .visuel{height:170px;background:linear-gradient(135deg,#0f172a,#1e293b);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.35);font-size:.85rem;text-align:center;padding:1rem}
+.article .visuel img{width:100%;height:100%;object-fit:cover}
+.article .corps{padding:1.25rem;display:flex;flex-direction:column;flex:1}
+.article .ligne{display:flex;justify-content:space-between;align-items:center;margin-bottom:.8rem;gap:.5rem}
+.article .tag{background:rgba(56,189,248,.15);color:var(--accent);font-size:.75rem;font-weight:600;padding:.25rem .7rem;border-radius:99px;white-space:nowrap}
+.article .date{opacity:.55;font-size:.78rem;white-space:nowrap}
+.article h3{font-size:1.1rem;margin:0 0 .7rem 0;line-height:1.35}
+.article p.resume{font-size:.9rem;opacity:.8;line-height:1.55;margin:0;flex:1}
+.article .src{display:block;margin-top:1.1rem;padding-top:.8rem;border-top:1px solid rgba(255,255,255,.08);font-size:.82rem}
+.article .src a{color:var(--accent);text-decoration:none}
+.article .src a:hover{text-decoration:underline}
+@media(max-width:700px){.thematique>h2{font-size:1.6rem}.thematique{padding:0 1rem}}
 </style></head><body>
 <header><a class="logo" href="index.html">Matthieu NEYT · SIO</a>
 <nav><a href="index.html">Accueil</a><a href="e5.html">Épreuve E5</a><a href="e6.html">Épreuve E6</a><a href="entreprise.html">Entreprise</a><a href="veille.html" class="active">Veille technologique</a></nav></header>
-<section><h2>Veille technologique</h2>
-<p class="todo">Présente ici ta démarche de veille : sujet choisi</p>
 
-<div class="card"><h3>Méthodologie de veille</h3>
-<p><strong>Sujet retenu</strong> : La cybercriminalité et les attaques par rançongiciel.</p>
-<p><strong>Problématique</strong> : Comment les entreprises et les collectivités peuvent-elles se protéger efficacement contre les attaques par rançongiciel, et comment réagir en cas d'infection ?</p>
-
-<div class="card"><h3>Sources suivies</h3>
-<p>[Liste des sites, blogs, chaînes ou comptes que tu consulte régulièrement pour ce sujet.]</p></div>
-
-<div class="card"><h3>Catégorie - La cybercriminalité et les attaques par rançongiciel</h3>
-<p>[Introduction de la catégorie : pourquoi ce sujet, en quoi il concerne directement les entreprises et les services informatiques.]</p>
-
-<div class="subtheme"><h4>Thème 1 - Le fonctionnement d'une attaque par rançongiciel</h4>
-<p class="meta">[Date] · Source : [à compléter]</p>
-<p>[Synthèse : vecteurs d'infection (hameçonnage, exploitation de failles, accès RDP exposés), chiffrement des données, exfiltration préalable, demande de rançon et double extorsion. Enjeu pour les entreprises : comprendre chaque étape pour placer les bonnes protections.]</p></div>
-
-<div class="subtheme"><h4>Thème 2 - Les campagnes d'attaques visant les collectivités et les hôpitaux</h4>
-<p class="meta">[Date] · Source : [à compléter]</p>
-<p>[Synthèse : exemples d'attaques récentes en France, conséquences sur la continuité de service (paralysie des services, retour au papier), coût de la remédiation. Enjeu : les collectivités et établissements de santé sont des cibles privilégiées car critiques et souvent moins protégées.]</p></div>
-
-<div class="subtheme"><h4>Thème 3 - Les mesures de prévention et la réponse à incident</h4>
-<p class="meta">[Date] · Source : [à compléter]</p>
-<p>[Synthèse : sauvegardes déconnectées et testées (règle 3-2-1), authentification multifacteur, cloisonnement du réseau, sensibilisation des utilisateurs, plan de reprise d'activité. Côté réponse : procédure du cybermalveillance.gouv.fr, dépôt de plainte, contact ANSSI, refus de payer la rançon.]</p></div>
-
-<div class="subtheme"><h4>Thème 4 - Le cadre réglementaire et les obligations des entreprises</h4>
-<p class="meta">[Date] · Source : [à compléter]</p>
-<p>[Synthèse : obligations de notification des violations sous le RGPD, directive NIS2 et son extension du périmètre, guides et recommandations de l'ANSSI. Enjeu : la cybersécurité devient une obligation légale et non plus un simple choix technique.]</p></div>
+<div class="thematique">
+<p class="eyebrow">Thématique 1</p>
+<h2>La cybercriminalité et les attaques par rançongiciel</h2>
+<p class="chapo">Comment les rançongiciels infectent les systèmes d'information des entreprises et des collectivités, et quels moyens permettent de s'en protéger et d'y répondre. [À compléter : précise ici ta problématique et pourquoi ce sujet concerne directement le service informatique dans lequel tu travailles.]</p>
 </div>
 
-<div class="card"><h3>Thème - [Autre sujet de veille]</h3><p>[Synthèse des informations collectées, date de publication, source, enjeu pour les entreprises.]</p></div>
-</section>
+<div class="thematique">
+<p class="eyebrow">Méthodologie</p>
+<h2>Ma démarche de veille</h2>
+<p><strong>Sujet retenu</strong> : la cybercriminalité et les attaques par rançongiciel.</p>
+<p><strong>Problématique</strong> : comment les entreprises et les collectivités peuvent-elles se protéger efficacement contre une attaque par rançongiciel, et comment réagir en cas d'infection ?</p>
+<p>[Fréquence de recherche - ex. une fois par semaine. Outils utilisés : flux RSS, newsletters, réseaux professionnels, podcasts.]</p>
+</div>
+
+<div class="thematique">
+<div class="grille">
+<article class="article">
+<div class="visuel">[Image de l'article -<br>ex. logo, capture d'écran]</div>
+<div class="corps">
+<div class="ligne"><span class="tag">Rançongiciel</span><span class="date">[Mois Année]</span></div>
+<h3>[Titre de l'article ou de l'actualité]</h3>
+<p class="resume">[Résumé en quelques phrases : de quoi parle l'article, quels sont les faits ou chiffres clés, et en quoi cela concerne les entreprises.]</p>
+<span class="src">Source : <a href="#">[nom du site]</a></span>
+</div></article>
+
+<article class="article">
+<div class="visuel">[Image de l'article]</div>
+<div class="corps">
+<div class="ligne"><span class="tag">Vulnérabilité</span><span class="date">[Mois Année]</span></div>
+<h3>[Titre de l'article ou de l'actualité]</h3>
+<p class="resume">[Résumé en quelques phrases : de quoi parle l'article, quels sont les faits ou chiffres clés, et en quoi cela concerne les entreprises.]</p>
+<span class="src">Source : <a href="#">[nom du site]</a></span>
+</div></article>
+
+<article class="article">
+<div class="visuel">[Image de l'article]</div>
+<div class="corps">
+<div class="ligne"><span class="tag">Sauvegardes</span><span class="date">[Mois Année]</span></div>
+<h3>[Titre de l'article ou de l'actualité]</h3>
+<p class="resume">[Résumé en quelques phrases : de quoi parle l'article, quels sont les faits ou chiffres clés, et en quoi cela concerne les entreprises.]</p>
+<span class="src">Source : <a href="#">[nom du site]</a></span>
+</div></article>
+
+<article class="article">
+<div class="visuel">[Image de l'article]</div>
+<div class="corps">
+<div class="ligne"><span class="tag">ANSSI</span><span class="date">[Mois Année]</span></div>
+<h3>[Titre de l'article ou de l'actualité]</h3>
+<p class="resume">[Résumé en quelques phrases : de quoi parle l'article, quels sont les faits ou chiffres clés, et en quoi cela concerne les entreprises.]</p>
+<span class="src">Source : <a href="#">[nom du site]</a></span>
+</div></article>
+
+<article class="article">
+<div class="visuel">[Image de l'article]</div>
+<div class="corps">
+<div class="ligne"><span class="tag">Sensibilisation</span><span class="date">[Mois Année]</span></div>
+<h3>[Titre de l'article ou de l'actualité]</h3>
+<p class="resume">[Résumé en quelques phrases : de quoi parle l'article, quels sont les faits ou chiffres clés, et en quoi cela concerne les entreprises.]</p>
+<span class="src">Source : <a href="#">[nom du site]</a></span>
+</div></article>
+
+<article class="article">
+<div class="visuel">[Image de l'article]</div>
+<div class="corps">
+<div class="ligne"><span class="tag">Réglementation</span><span class="date">[Mois Année]</span></div>
+<h3>[Titre de l'article ou de l'actualité]</h3>
+<p class="resume">[Résumé en quelques phrases : de quoi parle l'article, quels sont les faits ou chiffres clés, et en quoi cela concerne les entreprises.]</p>
+<span class="src">Source : <a href="#">[nom du site]</a></span>
+</div></article>
+</div>
+</div>
+
+<div class="thematique">
+<p class="eyebrow">Sources suivies</p>
+<h2>Mes sources</h2>
+<p>[Liste des sites, blogs, chaînes ou comptes que tu consultes régulièrement : ANSSI, cybermalveillance.gouv.fr, CERT-FR, LeMagIT, ZDNet, flux RSS, newsletters…]</p>
+</div>
+
 <footer>© Matthieu NEYT - Portfolio BTS SIO · 2026 Tous droits réservés.</footer></body></html>
