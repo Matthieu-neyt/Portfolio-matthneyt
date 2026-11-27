@@ -1,0 +1,236 @@
+<!-- ============================================================
+     VEILLE TECHNOLOGIQUE - 6 cartes à coller dans veille.html
+     1) Remplace tes 6 anciennes cartes (celles avec les [crochets])
+        par le bloc <section class="vt-grid"> ... </section>
+     2) Colle le bloc <style> une seule fois (dans <head> ou dans style.css
+        sans les balises <style>)
+     Les classes commencent par "vt-" pour ne pas entrer en conflit
+     avec ton CSS existant.
+     ============================================================ -->
+
+<style>
+  .vt-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1135px;
+    margin: 40px auto;
+  }
+  .vt-card {
+    display: flex;
+    flex-direction: column;
+    background: #1b2538;
+    border: 1px solid #2a3750;
+    border-top: 3px solid #38bdf8;
+    border-radius: 14px;
+    overflow: hidden;
+    color: #cbd5e1;
+  }
+  .vt-img {
+    height: 170px;
+    background: #141c2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+    font-size: 13px;
+    color: #64748b;
+  }
+  .vt-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .vt-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 18px 20px 16px;
+  }
+  .vt-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 12px;
+    color: #94a3b8;
+  }
+  .vt-tag {
+    background: #1e3a5f;
+    color: #38bdf8;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 999px;
+  }
+  .vt-title {
+    margin: 0 0 10px;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #38bdf8;
+  }
+  .vt-text {
+    margin: 0 0 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cbd5e1;
+  }
+  .vt-source {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid #2a3750;
+    font-size: 13px;
+    color: #e2e8f0;
+  }
+  .vt-source a {
+    color: #38bdf8;
+    text-decoration: none;
+  }
+  .vt-source a:hover,
+  .vt-source a:focus-visible {
+    text-decoration: underline;
+  }
+</style>
+
+<section class="vt-grid">
+
+  <!-- 1. RANÇONGICIEL -->
+  <article class="vt-card">
+    <div class="vt-img">
+      <!-- Remplace par : <img src="images/rancongiciel.png" alt="Rançongiciels : moins d'attaques mais plus de vols de données"> -->
+      [Image de l'article]
+    </div>
+    <div class="vt-body">
+      <div class="vt-meta">
+        <span class="vt-tag">Rançongiciel</span>
+        <span>Mars 2026</span>
+      </div>
+      <h3 class="vt-title">Rançongiciels : moins d'attaques, mais plus de vols de données</h3>
+      <p class="vt-text">
+        L'ANSSI a recensé 128 compromissions par rançongiciel en 2025, contre 141 en 2024 (environ -9 %).
+        En revanche, les incidents d'exfiltration de données sont passés de 130 à 196 (plus de 50 % de hausse) :
+        les attaquants misent de plus en plus sur le vol de données et la menace de les publier.
+        Toutes les entreprises sont concernées, même celles qui ont de bonnes sauvegardes.
+      </p>
+      <div class="vt-source">
+        Source : <a href="https://shattered.io/fr/panorama-cybermenace-anssi-2025/" target="_blank" rel="noopener">Shattered.io (d'après l'ANSSI)</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 2. VULNÉRABILITÉ (À COMPLÉTER avec un article précis) -->
+  <article class="vt-card">
+    <div class="vt-img">
+      [Image de l'article]
+    </div>
+    <div class="vt-body">
+      <div class="vt-meta">
+        <span class="vt-tag">Vulnérabilité</span>
+        <span>[Mois Année]</span>
+      </div>
+      <h3 class="vt-title">Failles critiques : pourquoi les mises à jour sont vitales</h3>
+      <p class="vt-text">
+        Une faille non corrigée est l'une des portes d'entrée les plus courantes pour un rançongiciel.
+        Les alertes du CERT-FR signalent régulièrement des vulnérabilités critiques sur des systèmes très répandus
+        (serveurs, VPN, messageries). Appliquer rapidement les correctifs réduit fortement le risque pour l'entreprise.
+      </p>
+      <div class="vt-source">
+        Source : <a href="https://www.cert.ssi.gouv.fr/" target="_blank" rel="noopener">CERT-FR</a>
+        <!-- Remplace le lien par l'alerte précise que tu choisis -->
+      </div>
+    </div>
+  </article>
+
+  <!-- 3. SAUVEGARDES (À COMPLÉTER avec un article précis) -->
+  <article class="vt-card">
+    <div class="vt-img">
+      [Image de l'article]
+    </div>
+    <div class="vt-body">
+      <div class="vt-meta">
+        <span class="vt-tag">Sauvegardes</span>
+        <span>[Mois Année]</span>
+      </div>
+      <h3 class="vt-title">Sauvegardes : la règle 3-2-1 face aux rançongiciels</h3>
+      <p class="vt-text">
+        Garder 3 copies des données, sur 2 supports différents, dont 1 hors ligne ou isolée du réseau.
+        Les sauvegardes connectées peuvent être chiffrées par les attaquants : il faut donc des copies
+        déconnectées et tester régulièrement la restauration pour être sûr de pouvoir redémarrer après une attaque.
+      </p>
+      <div class="vt-source">
+        Source : <a href="https://cyber.gouv.fr/" target="_blank" rel="noopener">ANSSI</a>
+        <!-- Remplace le lien par le guide ou l'article précis -->
+      </div>
+    </div>
+  </article>
+
+  <!-- 4. ANSSI -->
+  <article class="vt-card">
+    <div class="vt-img">
+      [Image de l'article]
+    </div>
+    <div class="vt-body">
+      <div class="vt-meta">
+        <span class="vt-tag">ANSSI</span>
+        <span>Mars 2026</span>
+      </div>
+      <h3 class="vt-title">Panorama de la cybermenace 2025 de l'ANSSI</h3>
+      <p class="vt-text">
+        Publié le 11 mars 2026, ce bilan annuel indique que l'ANSSI a traité 3 586 événements de sécurité en 2025,
+        soit 18 % de moins qu'en 2024, une baisse due au pic lié aux Jeux olympiques l'année précédente.
+        L'agence souligne que les attaques se diversifient et que l'IA générative peut les rendre plus sophistiquées.
+      </p>
+      <div class="vt-source">
+        Source : <a href="https://cyber.gouv.fr/actualites/panorama-de-la-cybermenace-2025/" target="_blank" rel="noopener">cyber.gouv.fr (ANSSI)</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 5. SENSIBILISATION (À COMPLÉTER avec un article précis) -->
+  <article class="vt-card">
+    <div class="vt-img">
+      [Image de l'article]
+    </div>
+    <div class="vt-body">
+      <div class="vt-meta">
+        <span class="vt-tag">Sensibilisation</span>
+        <span>[Mois Année]</span>
+      </div>
+      <h3 class="vt-title">Hameçonnage : former les employés, première défense</h3>
+      <p class="vt-text">
+        Un simple courriel piégé suffit souvent à lancer une attaque par rançongiciel.
+        Sensibiliser les employés à repérer les messages suspects, à ne pas ouvrir de pièces jointes douteuses
+        et à signaler rapidement un incident est l'une des mesures les plus efficaces et les moins coûteuses.
+      </p>
+      <div class="vt-source">
+        Source : <a href="https://www.cybermalveillance.gouv.fr/" target="_blank" rel="noopener">Cybermalveillance.gouv.fr</a>
+        <!-- Remplace le lien par l'article précis -->
+      </div>
+    </div>
+  </article>
+
+  <!-- 6. RÉGLEMENTATION -->
+  <article class="vt-card">
+    <div class="vt-img">
+      [Image de l'article]
+    </div>
+    <div class="vt-body">
+      <div class="vt-meta">
+        <span class="vt-tag">Réglementation</span>
+        <span>Novembre 2026</span>
+      </div>
+      <h3 class="vt-title">Loi Résilience (NIS2) : votée par l'Assemblée nationale</h3>
+      <p class="vt-text">
+        Le projet de loi « Résilience et Cybersécurité », qui transpose la directive européenne NIS 2,
+        a été adopté le 17 novembre 2026 en première lecture à l'Assemblée nationale.
+        Il concerne les entreprises de secteurs critiques et les collectivités de plus de 30 000 habitants,
+        soit près de 15 000 organisations. Le texte n'est pas encore définitif.
+      </p>
+      <div class="vt-source">
+        Source : <a href="https://siecledigital.fr/2026/11/18/des-milliers-dentreprises-vont-devoir-renforcer-leur-cybersecurite-apres-un-vote-majeur-des-deputes/" target="_blank" rel="noopener">Siècle Digital</a>
+      </div>
+    </div>
+  </article>
+
+</section>
